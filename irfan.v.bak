@@ -1,0 +1,14 @@
+module irfan(
+input wire clk,rst,ir
+output reg led);
+
+always@(posedge clk)
+begin
+	if(reset)
+	led<=1'b0;
+	else if(ir==1'b0)
+	led<=1'b1;
+	else
+	led<=1'b0;
+end
+endmodule
